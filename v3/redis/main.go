@@ -22,9 +22,10 @@ func main() {
 			"/",
 			"/user/:name",
 		},
-		Server:   "localhost:6379",
-		Password: "",
-		Database: 0,
+		Server:        "localhost:6379",
+		Password:      "",
+		Database:      0,
+		CacheInfoPath: "/cache/info",
 	}
 	cache, err := cacheman.NewRedis(cacheConfig)
 	if err == nil {

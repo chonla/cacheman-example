@@ -22,9 +22,10 @@ func main() {
 			"/",
 			"/user/:name",
 		},
-		Server:   "localhost:11211",
-		Password: "",
-		Database: 0,
+		Server:        "localhost:11211",
+		Password:      "",
+		Database:      0,
+		CacheInfoPath: "/cache/info",
 	}
 	cache, err := cacheman.NewMemcached(cacheConfig)
 	if err == nil {

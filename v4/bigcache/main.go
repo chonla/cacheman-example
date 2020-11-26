@@ -22,6 +22,7 @@ func main() {
 			"/",
 			"/user/:name",
 		},
+		CacheInfoPath: "/cache/info",
 	}
 	cache, err := cacheman.NewBigCache(cacheConfig)
 	if err == nil {
