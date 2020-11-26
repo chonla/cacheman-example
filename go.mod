@@ -13,5 +13,3 @@ require (
 	golang.org/x/sys v0.0.0-20201119102817-f84b799fce68 // indirect
 	golang.org/x/text v0.3.4 // indirect
 )
-
-replace github.com/chonla/cacheman => /Users/chonla/go/src/github.com/chonla/cacheman
