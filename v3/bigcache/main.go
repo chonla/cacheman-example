@@ -25,6 +25,7 @@ func main() {
 	}
 	cache, err := cacheman.NewBigCache(cacheConfig)
 	if err == nil {
+		fmt.Printf("%s is used", cache.Type())
 		e.Use(cacheman.Middleware(cacheConfig, cache))
 	} else {
 		e.Logger.Error(err.Error())

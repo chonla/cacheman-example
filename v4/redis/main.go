@@ -29,8 +29,10 @@ func main() {
 	cache, err := cacheman.NewRedis(cacheConfig)
 	if err == nil {
 		e.Use(cacheman.MiddlewareV4(cacheConfig, cache))
+		fmt.Printf("%s is used", cache.Type())
 	} else {
 		e.Logger.Error(err.Error())
+		fmt.Println(err.Error())
 	}
 
 	e.GET("/", func(c echo.Context) error {
