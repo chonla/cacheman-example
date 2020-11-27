@@ -26,6 +26,7 @@ func main() {
 		Password:      "",
 		Database:      0,
 		CacheInfoPath: "/cache/info",
+		PurgePath:     "/cache",
 	}
 	cache, err := cacheman.NewMemcached(cacheConfig)
 	if err == nil {
